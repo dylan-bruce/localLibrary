@@ -59,14 +59,15 @@ function getMostPopularBooks(books) {
   return popularBooks.sort((a, b) => b.count - a.count).slice(0, 5) //Sortin highest to lowest and setting length of 5
 }
 //--------------------------------------------------------------------------------------------------------//
-//declare empty array
-//loop through books
-//
 function getMostPopularAuthors(books, authors) {
+  
+  //Helper function to sort the array and set the length to 5
   const topFiveCount = array => {
     return array.sort((a, b) => b.count - a.count)
       .filter((_, index) => index < 5);
   }
+  //Helper function to sort the array and set the length to 5
+
   let authId = [];
   for (let book in books) {
     authId.push(books[book].authorId);
